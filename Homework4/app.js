@@ -98,3 +98,4 @@ let test = new AttachedPost("Nick", "Text", 25 );
 test.makeTextHighlighted();
 test.edit("dsdssddasdsadsd");
 console.log(test);
+
