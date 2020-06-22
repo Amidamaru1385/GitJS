@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.button-modal-window{
+    margin-top: 40px;
+    margin-left: 40px;
+    
+}
+
+
+.close{
+    display: grid;
+    justify-content: end;
+}
+
+.modal-window{
+    background-color: aqua;
+    width: 500px;
+    height: 200px;
+    position: fixed;
+    margin-left: 40%;
+    margin-top: 15%;
+    display: none;
+    z-index: 1;
+    animation-name: modalAnim;
+    animation-duration: 0.6s
+}
+
+@keyframes modalAnim {
+    from {left:-100%;}
+    to {left:0%}
+}
+.text{
+    display: grid;
+    justify-content: center;
+    padding-top: 70px;
+    
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="products">
+        <div class="product">
+            <div class="productName">Product1</div>
+            <img src="https://picsum.photos/200" alt="img">
+            <div class="desc invisible">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati laudantium
+                quo neque consectetur debitis voluptate illum explicabo non consequuntur quos voluptas quidem, quas a
+                iusto alias animi veritatis nisi excepturi.</div>
+            <div><button>Show more</button></div>
+        </div>
+        <div class="product">
+            <div class="productName">Product2</div>
+            <img src="https://picsum.photos/200" alt="img">
+            <div class="desc invisible">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati laudantium
+                quo neque consectetur debitis voluptate illum explicabo non consequuntur quos voluptas quidem, quas a
+                iusto alias animi veritatis nisi excepturi.</div>
+            <div><button>Show more</button></div>
+        </div>
+        <div class="product">
+            <div class="productName">Product3</div>
+            <img src="https://picsum.photos/200" alt="img">
+            <div class="desc invisible">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati laudantium
+                quo neque consectetur debitis voluptate illum explicabo non consequuntur quos voluptas quidem, quas a
+                iusto alias animi veritatis nisi excepturi.</div>
+            <div><button>Show more</button></div>
+        </div>
+    </div>
+    <script>
+        let img = document.querySelectorAll("img");
+        let desc = document.querySelectorAll(".invisible");
+        let buttons = document.querySelectorAll("button");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function () {
+                if (img[i].classList == "invisible") {
+                    img[i].classList.remove("invisible");
+                    desc[i].classList.add("invisible");
+                    buttons[i].textContent = "Show more";
+                } else {
+                    img[i].classList.add("invisible");
+                    desc[i].classList.remove("invisible");
+                    buttons[i].textContent = "Cancel";
+                }
+            })
+        };
+    </script>
+</body>
+
+
+</html>
