@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="button-modal-window">Модальное окно</button>
+    <div class="modal-window">
+        <div class="close">X</div>
+        <div class="text">Это модальное окно</div>
+    </div>
+    <script>
+        "use strict";
+        let modal = document.querySelector(".modal-window");
+        let btn = document.querySelector(".button-modal-window");
+        let wClose = document.querySelector(".close");
+
+        btn.addEventListener("click", function () {
+            modal.style.display = "block";
+        })
+        wClose.addEventListener("click", function(){
+            modal.style.display = "none";
+        })
+
+        
+    </script>
+</body>
+
+</html>
