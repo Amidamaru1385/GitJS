@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cd6bd7aaf7.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="load-spinner"> <i class="fas fa-spinner fa-4x fa-spin "></i></div>
+        <div><i class="fas fa-arrow-left fa-4x"></i></div>
+        <div class="slider-item notHidden"><img src="https://picsum.photos/1920/1080?random=1" alt="photo1"></div>
+        <div class="slider-item"><img src="https://picsum.photos/1920/1080?random=2" alt="photo2"></div>
+        <div class="slider-item"><img src="https://picsum.photos/1920/1080?random=3" alt="photo3"></div>
+        <i class="fas fa-arrow-right fa-4x"></i>
+    </div>
+    
+    <script>
+        'use strict';
+        window.addEventListener("load",function(){
+           document.querySelector(".load-spinner").style.display = "none";
+            document.querySelector(".slider-item").classList.add("notHidden");
+           
+        })
+        let img = document.querySelectorAll(".slider-item")
+        let leftArrow = document.querySelector(".fa-arrow-left");
+        let rightArrow = document.querySelector(".fa-arrow-right")
+        leftArrow.addEventListener("click", function(){
+            if(img[0].classList.contains("notHidden")){
+                img[0].classList.remove("notHidden");
+                img[img.length - 1].classList.add("notHidden");
+            }
+           else{
+                for(let i = 1; i < img.length; i++){
+                    if(img[i].classList.contains("notHidden")){
+                        img[i].classList.remove("notHidden");
+                        img[i-1].classList.add("notHidden");
+                    }
+                }  
+           }
+        })
+
+        rightArrow.addEventListener("click", function(){
+            if(img[img.length-1].classList.contains("notHidden")){
+                img[img.length-1].classList.remove("notHidden");
+                img[0].classList.add("notHidden");
+            }
+           else{
+                for(let i = 0; i < img.length-1; i++){
+                    if(img[i].classList.contains("notHidden")){
+                        img[i].classList.remove("notHidden");
+                        img[i+1].classList.add("notHidden");
+                        break;  
+                    }
+                }  
+           }
+        })
+    </script>
+</body>
+</html>

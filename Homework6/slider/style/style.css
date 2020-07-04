@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    overflow: hidden;
+}
+.slider{
+    display: inline-block;
+    
+}
+
+.slider-item{
+    height: 100vh;
+    display: none;
+}
+
+.slider-item img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    
+}
+
+.notHidden{
+    display:block;
+}
+
+.load-spinner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.fa-arrow-left, .fa-arrow-right{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;       
+}
+
+.fa-arrow-left{
+    left: 5%;
+}
+
+.fa-arrow-right{
+    right:5%;
+}
