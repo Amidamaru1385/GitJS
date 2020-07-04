@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="products">
+    <div id="1" class="product-item">
+      <img src="img/greenBread.jpg">
+      <div class="product-list">
+        <h3>Зеленый Хлеб</h3>
+        <span class="price">₽ 2000</span>
+        <button data-id="1" data-price="2000" data-name="Зеленый Хлеб" class="addButton button"> В корзину</button>
+      </div>
+    </div>
+    <div id="2" class="product-item">
+      <img src="img/redBread.jpg">
+      <div class="product-list">
+        <h3>Красный Хлеб</h3>
+        <span class="price">₽ 3000</span>
+        <button data-id="2" data-price="3000" data-name="Красный Хлеб" class="addButton button">В корзину</button>
+      </div>
+    </div>
+    <div id="3" class="product-item">
+      <img src="img/blueBread.jpg">
+      <div class="product-list">
+        <h3>Синий Хлеб</h3>
+        <span class="price">₽ 1800</span>
+        <button data-id="3" data-price="1800" data-name="Синий Хлеб" class="addButton button">В корзину</button>
+      </div>
+    </div>
+  </div>
+  <div  class="basket">
+    <span>Корзина:</span>
+    <div id="htmlBasket" class="innerBasket"></div>
+    <span>Сумма:</span>
+    <div id = "basketFullPrice" class="basketFullPrice"></div>
+    <button class = "button clearButton">Очистить корзину</button>
+    
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+
+</html>
